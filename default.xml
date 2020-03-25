@@ -20,14 +20,10 @@
            remote="github"
            sync-c="true"
            sync-j="4" />
-  <remote  name="Galaxy-MSM8916"
-           fetch="https://github.com"
-           review="review.msm8916.com"
-           revision="lineage-16.0" />								
 
   <!-- AOSP Projects -->
 
-  <project path="build/make" name="LineageOS/android_build" groups="pdk" >
+  <project path="build/make" name="LineageOS/android_build" groups="pdk">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -36,59 +32,59 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" remote="aosp" />
-  <project path="build/kati" name="LineageOS/android_build_kati" groups="pdk,tradefed" />
-  <project path="build/soong" name="LineageOS/android_build_soong" groups="pdk,tradefed" >
+  <project path="build/blueprint" name="LineageOS/android_build_blueprint" groups="pdk,tradefed" remote="aosp" />
+  <project path="build/kati" name="platform/build/kati" groups="pdk,tradefed" remote="aosp" />
+  <project path="build/soong" name="LineageOS/android_build_soong" groups="pdk,tradefed" remote="aosp" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
   <project path="bionic" name="LineageOS/android_bionic" groups="pdk" />
   <project path="bootable/recovery" name="omnirom/android_bootable_recovery" remote="twrp-github" revision="android-9.0" groups="pdk"/>
-  <project path="external/sony/boringssl-compat" name="LineageOS/android_external_sony_boringssl-compat" remote="github" revision="lineage-15.1"/>  <project path="external/bouncycastle" name="platform/external/bouncycastle" groups="pdk" remote="aosp" />
+  <project path="external/boringssl" name="platform/external/boringssl" groups="pdk" remote="aosp" />
+  <project path="external/bouncycastle" name="platform/external/bouncycastle" groups="pdk" remote="aosp" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" remote="aosp" />
   <project path="external/clang" name="platform/external/clang" groups="pdk" remote="aosp" />
   <project path="external/compiler-rt" name="platform/external/compiler-rt" groups="pdk" remote="aosp" />
-  <project path="external/dlmalloc" name="platform/external/dlmalloc" groups="pdk" remote="aosp" />
+  <project path="external/dlmalloc" name="platform/external/dlmalloc" remote="aosp" groups="pdk" />
   <project path="external/e2fsprogs" name="LineageOS/android_external_e2fsprogs" groups="pdk" />
   <project path="external/elfutils" name="platform/external/elfutils" groups="pdk" remote="aosp" />
   <project path="external/f2fs-tools" name="platform/external/f2fs-tools" groups="pdk" remote="aosp" />
-  <project path="external/fec" name="platform/external/fec" groups="pdk" remote="aosp" />
+  <project path="external/fec" name="platform/external/fec" remote="aosp" groups="pdk" />
   <project path="external/freetype" name="platform/external/freetype" groups="pdk" remote="aosp" />
   <project path="external/golang-protobuf" name="platform/external/golang-protobuf" groups="pdk" remote="aosp" />
   <project path="external/gptfdisk" name="platform/external/gptfdisk" groups="pdk" remote="aosp" />
   <project path="external/icu" name="platform/external/icu" groups="pdk" remote="aosp" />
   <project path="external/jemalloc" name="platform/external/jemalloc" groups="pdk" remote="aosp" />
   <project path="external/jemalloc_new" name="platform/external/jemalloc_new" groups="pdk" remote="aosp" />
-  <project path="external/libcap-ng" name="platform/external/libcap-ng" groups="pdk" remote="aosp" />
-  <project path="external/libcxx" name="LineageOS/android_external_libcxx" groups="pdk" />
+  <project path="external/libcap" name="platform/external/libcap" remote="aosp" />
+  <project path="external/libcxx" name="platform/external/libcxx" groups="pdk" remote="aosp" />
   <project path="external/libcxxabi" name="platform/external/libcxxabi" groups="pdk" remote="aosp" />
   <project path="external/libdrm" name="platform/external/libdrm" groups="pdk" remote="aosp" />
-  <project path="external/libjpeg-turbo" name="LineageOS/android_external_libjpeg-turbo" groups="pdk" />
+  <project path="external/libjpeg-turbo" name="platform/external/libjpeg-turbo" groups="pdk" remote="aosp" />
   <project path="external/libnl" name="platform/external/libnl" groups="pdk" remote="aosp" />
-  <project path="external/libogg" name="platform/external/libogg" groups="pdk" remote="aosp" />
-  <project path="external/libpng" name="LineageOS/android_external_libpng" groups="pdk" />
+  <project path="external/libpng" name="platform/external/libpng" groups="pdk" remote="aosp" />
   <project path="external/libunwind" name="platform/external/libunwind" groups="pdk" remote="aosp" />
-  <project path="external/libunwind_llvm" name="platform/external/libunwind_llvm" groups="pdk" remote="aosp" />
+  <project path="external/libunwind_llvm" name="platform/external/libunwind_llvm" remote="aosp" groups="pdk" />
   <project path="external/libxml2" name="platform/external/libxml2" groups="pdk,libxml2" remote="aosp" />
   <project path="external/llvm" name="platform/external/llvm" groups="pdk" remote="aosp" />
   <project path="external/lz4" name="platform/external/lz4" groups="pdk" remote="aosp" />
   <project path="external/lzma" name="platform/external/lzma" groups="pdk" remote="aosp" />
-  <project path="external/markdown" name="platform/external/markdown" groups="pdk" remote="aosp" />
-  <project path="external/minijail" name="platform/external/minijail" groups="pdk" remote="aosp" />
+  <project path="external/minijail" name="platform/external/minijail" remote="aosp" groups="pdk" />
   <project path="external/mksh" name="LineageOS/android_external_mksh" groups="pdk" />
   <project path="external/pcre" name="platform/external/pcre" groups="pdk" remote="aosp" />
   <project path="external/protobuf" name="platform/external/protobuf" groups="pdk" remote="aosp" />
   <project path="external/scrypt" name="platform/external/scrypt" groups="pdk" remote="aosp" />
-  <project path="external/selinux" name="LineageOS/android_external_selinux" groups="pdk" />
+  <project path="external/selinux" name="platform/external/selinux" groups="pdk" remote="aosp" />
   <project path="external/squashfs-tools" name="platform/external/squashfs-tools" groups="pdk" remote="aosp" />
   <project path="external/toybox" name="LineageOS/android_external_toybox" groups="pdk" />
-  <project path="external/zlib" name="LineageOS/android_external_zlib" groups="pdk" />
+  <project path="external/zlib" name="platform/external/zlib" groups="pdk" remote="aosp" />
   <project path="frameworks/native" name="LineageOS/android_frameworks_native" groups="pdk" />
   <project path="hardware/google/apf" name="platform/hardware/google/apf" groups="pdk" remote="aosp" />
   <project path="hardware/google/av" name="platform/hardware/google/av" groups="pdk" remote="aosp" />
   <project path="hardware/google/easel" name="platform/hardware/google/easel" groups="pdk,easel" remote="aosp" />
   <project path="hardware/google/interfaces" name="platform/hardware/google/interfaces" groups="pdk" remote="aosp" />
-  <project path="hardware/google/pixel" name="platform/hardware/google/pixel" groups="bonito,crosshatch" remote="aosp" />
+  <project path="hardware/google/pixel" name="platform/hardware/google/pixel" groups="generic_fs,pixel" remote="aosp" />
+  <project path="hardware/google/pixel-sepolicy" name="platform/hardware/google/pixel-sepolicy" groups="generic_fs,pixel" remote="aosp" />
   <project path="hardware/interfaces" name="LineageOS/android_hardware_interfaces" groups="pdk" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense,pdk" remote="aosp" />
   <project path="hardware/libhardware" name="LineageOS/android_hardware_libhardware" groups="pdk" />
@@ -97,39 +93,34 @@
   <project path="hardware/qcom/display" name="LineageOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" />
   <project path="hardware/qcom/keymaster" name="LineageOS/android_hardware_qcom_keymaster" groups="qcom,qcom_keymaster,pdk-qcom" />
   <project path="hardware/qcom/sdm845/display" name="LineageOS/android_hardware_qcom_sdm845_display" groups="qcom_sdm845" />
-  <project path="hardware/qcom/sdm845/gps" name="LineageOS/android_hardware_qcom_sdm845_gps" groups="qcom_sdm845" />
-  <project path="hardware/qcom/sdm845/media" name="LineageOS/android_hardware_qcom_sdm845_media" groups="qcom_sdm845" />
-  <project path="hardware/qcom/sdm845/thermal" name="LineageOS/android_hardware_qcom_sdm845_thermal" groups="qcom_sdm845" />
-  <project path="hardware/qcom/sdm845/vr" name="LineageOS/android_hardware_qcom_sdm845_vr" groups="qcom_sdm845" />
-  <project path="hardware/qcom/wlan" name="LineageOS/android_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" />
-  <project path="hardware/ril" name="LineageOS/android_hardware_ril" groups="pdk" />
+  <project path="hardware/qcom/sdm845/media" name="platform/hardware/qcom/sdm845/media" groups="qcom_sdm845" remote="aosp" />
+  <project path="hardware/qcom/sdm845/thermal" name="platform/hardware/qcom/sdm845/thermal" groups="generic_fs,qcom_sdm845" remote="aosp" />
+  <project path="hardware/qcom/sdm845/vr" name="platform/hardware/qcom/sdm845/vr" groups="generic_fs,qcom_sdm845" remote="aosp" />
   <project path="kernel/build" name="kernel/build" remote="aosp" />
   <project path="kernel/configs" name="kernel/configs" groups="vts,pdk" remote="aosp" />
-  <project path="kernel/tests" name="kernel/tests" remote="aosp" />
+  <project path="kernel/tests" name="kernel/tests" groups="vts,pdk" remote="aosp" />
   <project path="libcore" name="platform/libcore" groups="pdk" remote="aosp" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" remote="aosp" />
   <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" groups="pdk" clone-depth="1" remote="aosp" />
   <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="pdk" clone-depth="1" remote="aosp" />
   <project path="prebuilts/devtools" name="platform/prebuilts/devtools" groups="pdk-fs" clone-depth="1" remote="aosp" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" groups="pdk,linux,arm" clone-depth="1" remote="aosp" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" groups="pdk,linux" clone-depth="1" remote="aosp" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" groups="pdk,linux,arm" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" groups="pdk,linux" clone-depth="1" remote="aosp" />
   <project path="prebuilts/go/linux-x86" name="platform/prebuilts/go/linux-x86" groups="linux,pdk,tradefed" clone-depth="1" remote="aosp" />
-  <project path="prebuilts/jdk/jdk8" name="platform/prebuilts/jdk/jdk8" groups="pdk" clone-depth="1" remote="aosp" />
   <project path="prebuilts/misc" name="platform/prebuilts/misc" groups="pdk" clone-depth="1" remote="aosp" />
-  <project path="prebuilts/ndk" name="platform/prebuilts/ndk" groups="pdk" clone-depth="1" remote="aosp" />
+  <project path="prebuilts/ndk" name="platform/prebuilts/ndk" groups="pdk" clone-depth="1" remote="aosp" revision="master" />
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" clone-depth="1" remote="aosp" />
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="pdk" clone-depth="1" remote="aosp" />
   <project path="prebuilts/bundletool" name="platform/prebuilts/bundletool" groups="pdk" clone-depth="1" remote="aosp" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" clone-depth="1" remote="aosp" />
   <project path="system/core" name="LineageOS/android_system_core" groups="pdk" />
-  <project path="system/extras" name="LineageOS/android_system_extras" groups="pdk" />
+  <project path="system/extras" name="platform/system/extras" groups="pdk" remote="aosp" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" remote="aosp" />
   <project path="system/keymaster" name="LineageOS/android_system_keymaster" groups="pdk" />
   <project path="system/netd" name="LineageOS/android_system_netd" groups="pdk" />
-  <project path="system/nvram" name="platform/system/nvram" groups="pdk" remote="aosp" />
-  <project path="system/security" name="LineageOS/android_system_security" groups="pdk" />
+  <project path="system/security" name="platform/system/security" groups="pdk" remote="aosp" />
   <project path="system/sepolicy" name="LineageOS/android_system_sepolicy" groups="pdk" />
-  <project path="system/timezone" name="LineageOS/android_system_timezone" groups="pdk" />
   <project path="system/vold" name="LineageOS/android_system_vold" groups="pdk" />
   <project path="toolchain/pgo-profiles" name="toolchain/pgo-profiles" groups="pdk" remote="aosp" />
   <project path="tools/base" name="platform/tools/base" groups="notdefault,tools" remote="aosp" />
@@ -137,33 +128,4 @@
 
   <include name="snippets/lineage.xml" />
 
- <!-- Samsung MSM8916 Common Repos -->
-  <project path="device/samsung/msm8916-common" name="Galaxy-MSM8916/android_device_samsung_msm8916-common" groups="device" remote="Galaxy-MSM8916"/>
-  <project path="device/samsung/qcom-common" name="LineageOS/android_device_samsung_qcom-common" groups="device" remote="github" revision="lineage-16.0"/>
-
- <!-- Samsung Hardware Repo -->
-  <project path="hardware/samsung" name="LineageOS/android_hardware_samsung" />
-
- <!-- Common Samsung MSM8916 Kernel -->
-  <project path="kernel/samsung/msm8916" name="Galaxy-MSM8916/android_kernel_samsung_msm8916" remote="Galaxy-MSM8916"/>
-
- <!-- Vendor Trees (for all devices) -->
-  <project path="vendor/samsung" name="Galaxy-MSM8916/proprietary_vendor_samsung" groups="device" remote="Galaxy-MSM8916"/>
-
- <!-- Dependencies -->
- <!-- <project path="external/busybox" name="omnirom/android_external_busybox" remote="github" revision="android-8.1"/> -->
-  <project path="external/sony/boringssl-compat" name="LineageOS/android_external_sony_boringssl-compat" remote="github" revision="lineage-15.1"/>
-  <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings"/>
-
- <!-- arm-eabi-7.2 -->
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.2" name="Galaxy-MSM8916/android-prebuilts-gcc-linux-x86-arm-arm-eabi-7.2" remote="github" revision="master"/>
-
- <!-- Galaxy J5 (2015) -->
-  <project path="device/samsung/j5-common" name="Galaxy-MSM8916/android_device_samsung_j5-common" groups="device" remote="Galaxy-MSM8916"/>
-  <project path="device/samsung/j53gxx" name="Galaxy-MSM8916/android_device_samsung_j53gxx" groups="device" remote="Galaxy-MSM8916"/>
-  <project path="device/samsung/j5lte" name="Galaxy-MSM8916/android_device_samsung_j5lte" groups="device" remote="Galaxy-MSM8916"/>
-  <project path="device/samsung/j5ltechn" name="Galaxy-MSM8916/android_device_samsung_j5ltechn" groups="device" remote="Galaxy-MSM8916"/>
-  <project path="device/samsung/j5nlte" name="Galaxy-MSM8916/android_device_samsung_j5nlte" groups="device" remote="Galaxy-MSM8916"/>  
-
-  <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />									  
 </manifest>
