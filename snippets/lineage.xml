@@ -10,7 +10,6 @@
   <project path="external/ntfs-3g" name="LineageOS/android_external_ntfs-3g" />
   <project path="external/vim" name="LineageOS/android_external_vim" />
   <project path="lineage-sdk" name="LineageOS/android_lineage-sdk" />
-  <project path="prebuilts/tools-lineage" name="LineageOS/android_prebuilts_tools-lineage" clone-depth="1" />
   <project path="vendor/lineage" name="LineageOS/android_vendor_lineage" />
 
   <!-- CodeAurora additions -->
