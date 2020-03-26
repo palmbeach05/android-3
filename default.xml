@@ -156,8 +156,6 @@
   <project path="toolchain/benchmark" name="toolchain/benchmark" remote="aosp" />
   <project path="toolchain/binutils" name="toolchain/binutils" groups="pdk" remote="aosp" />
   <project path="toolchain/pgo-profiles" name="toolchain/pgo-profiles" groups="pdk" remote="aosp" />
-  <project path="tools/base" name="platform/tools/base" groups="notdefault,tools" remote="aosp" />
-  <project path="tools/security" name="platform/tools/security" groups="pdk,tools" remote="aosp" />
 
  <!-- Samsung MSM8916 Common Repos -->
   <project path="device/samsung/msm8916-common" name="Galaxy-MSM8916/android_device_samsung_msm8916-common" groups="device" remote="Galaxy-MSM8916"/>
