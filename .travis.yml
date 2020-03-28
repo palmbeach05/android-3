@@ -5,6 +5,7 @@ addons:
   apt:
     packages:
       ant
+      phablet-tools
 env:
  global:
     - ANDROID_TARGET=android-29
