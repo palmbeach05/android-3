@@ -21,10 +21,6 @@ android:
     - extra
     
 before_script:
-    # Prepare pre-accepted licenses to not be promted at installation
-    - mkdir -p "$ANDROID_HOME/licenses"
-    - cp ./google-licenses/* "$ANDROID_HOME/licenses/"
-
     # Download and install gcloud cli to run firebase test commands
     - wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-218.0.0-linux-x86.tar.gz
     - tar zxf google-cloud-sdk-218.0.0-linux-x86.tar.gz google-cloud-sdk
