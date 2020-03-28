@@ -23,6 +23,7 @@ android:
     
 before_script:
     - repo init https://github.com/palmbeach05/android-3 -b lineage-16.0
+    - repo sync
 
 script:
     - chmod +x gradlew
