@@ -22,7 +22,9 @@ android:
     - extra
     
 before_script:
-    - mkdir ~/bin && curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
+    - mkdir ~/bin
+    - curl http://commondatastorage.googleapis.com/git-repo-downloads/repo ~/bin/repo
+    - chmod a+x ~/bin/repo
     - repo init -u https://github.com/palmbeach05/android-3 -b lineage-16.0
     - repo sync
     - git clone http://github.com/palmbeach05/local_manifests .repo/local_manifests -b master
