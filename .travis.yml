@@ -22,7 +22,7 @@ android:
     - extra
     
 before_script:
-    - curl http://commondatastorage.googleapis.com/git-repo-downloads/repo ~/bin/repo
+    - curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
     - chmod a+x ~/bin/repo
     - repo init -u https://github.com/palmbeach05/android-3 -b lineage-16.0
     - repo sync
